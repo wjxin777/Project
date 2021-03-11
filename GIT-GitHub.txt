@@ -1,0 +1,166 @@
+Distributed Version Control System
+
+
+PROBLEM
+
+- Checking out files exclusively not an option.
+- Fast switching vs slow switching
+- Same other problems as other VCSs.
+
+Solution was GIT
+
+
+THEORY
+
+The development of Git began on 3 April 2005 (Linux development started in 1991)
+
+Git saves the history of changes to a set of files. 
+Each saved point in history is called a "commit"
+
+File is created -> Changes -> Changes -> Commit -> Changes -> Rollback -> Changes -> Commit
+
+Any version of the file that has been commited can be reverted back (rolled back) to.
+
+A chain of commits makes up a branch and each branch has a name. The first commit in a repo
+is made to the "master" branch. 
+
+When someone wants to add a new feature, they can start a new branch and add commit with out changing the master branch.
+
+When they are ready to add their commits to the history of the master branch, they can merge their commits in. 
+
+When a user wants to share their work with the world, they can push their entire repo up to a public server and other users can clone this public repo. 
+
+Commits can continuely be pushed and pulled from this public repo.
+
+COMMANDS
+
+- git init
+- git status
+- git add <file>
+- git add .
+- git commit [-m "msg"]
+- git log --graph
+- git branch
+- git checkout -b <branch>
+- git merge
+- git reset
+- git push 
+- git pull
+- git fetch
+- git clone
+- git rebase
+- git checkout SHA
+
+
+HASH FUNCTIONS
+
+http://ericsink.com/vcbe/html/cryptographic_hashes.html
+
+OUTLINE
+
+- Problem
+- Theory
+- Practice
+    - git init
+    - create file
+    - staging / working dir discussion
+    - git add
+    - git status
+    - git commit
+    - git config --global ...
+    - more commits
+    - branches
+    - git merge
+    - git log
+    - merge conflict
+    - GitHub
+    - git remote add origin ...
+    - git push
+    - git pull
+    - git clone
+
+
+PRACTICE
+    
+git init
+Add file
+commit
+Change file
+commit
+git config --global user.name=
+git config --global user.email=
+git config --global core.editor=
+review logs
+revert one commit
+Add a second file
+commit
+Create branch
+Make changes to a file
+commit
+Move back to master branch and see that file is like it was before branch changes
+move to feature branch
+Add more commits
+move to master branch add commits
+merge feature branch into master branch
+
+Deal with merge conflict
+Add file with text
+commit
+make new branch 
+make several commits with changes to file
+switch to master branch
+make and commit changes to same file 
+attempt to merge feature branch
+See explosion!
+Deal with explosion
+Complete merge commit
+
+Setup GitHub account.
+Add SSH keys
+Create repo.
+Add remote to local repo
+Push commits
+Reveiw on GitHub. 
+
+Best practices
+50 character subject lines
+72 char body paragraphs
+Commit often
+Always create a feature branch and merge to master once feature branch is done
+master branch should always be "deployable"
+
+Rebasing to squash commits. (optional)
+
+
+https://git-scm.com/book/en/v2
+Chapter 1.1 - 1.4, 2, 3, 6
+
+1. 
+1.1 About Version Control
+1.2 A Short History of Git
+1.3 Git Basics
+1.4 The Command Line
+2. Git Basics
+2.1 Getting a Git Repository
+2.2 Recording Changes to the Repository
+2.3 Viewing the Commit History
+2.4 Undoing Things
+2.5 Working with Remotes
+2.6 Tagging
+2.7 Git Aliases
+2.8 Summary
+3. Git Branching
+3.1 Branches in a Nutshell
+3.2 Basic Branching and Merging
+3.3 Branch Management
+3.4 Branching Workflows
+3.5 Remote Branches
+3.6 Rebasing
+3.7 Summary
+6. GitHub
+6.1 Account Setup and Configuration
+6.2 Contributing to a Project
+6.3 Maintaining a Project
+6.4 Managing an organization
+6.5 Scripting GitHub
+6.6 Summary
